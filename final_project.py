@@ -283,5 +283,3 @@ for i in load2.columns:
 pp.runpp(net2, numba=False)
 pf_res_plotly(net2, on_map=True)
 print()
-print(gen2.columns)
-print(load2.columns)
