@@ -109,6 +109,7 @@ pp.create_transformer_from_parameters(project_net, hv_bus = 5, lv_bus = 15, sn_m
 pp.create_line_from_parameters(project_net, from_bus=0, to_bus=1, length_km=23, r_ohm_per_km=0.062, x_ohm_per_km=0.41036, c_nf_per_km=8.792127, max_i_ka=0.88898, name='s0_1')
 pp.create_line_from_parameters(project_net, from_bus=2, to_bus=6, length_km=40, r_ohm_per_km=0.062, x_ohm_per_km=0.41036, c_nf_per_km=8.792127, max_i_ka=0.88898, name='s2_6')
 pp.create_line_from_parameters(project_net, from_bus=2, to_bus=5, length_km=44, r_ohm_per_km=0.062, x_ohm_per_km=0.41036, c_nf_per_km=8.792127, max_i_ka=0.88898, name='s2_5')
+pp.create_line_from_parameters(project_net, from_bus=0, to_bus=6, length_km=33.4, r_ohm_per_km=0.062, x_ohm_per_km=0.41036, c_nf_per_km=8.792127, max_i_ka=0.88898, name='s0_6')
 # Double lines
 pp.create_line_from_parameters(project_net, from_bus=1, to_bus=2, length_km=58, r_ohm_per_km=0.031, x_ohm_per_km=0.193358009, c_nf_per_km=18.69669739, max_i_ka=0.88898 * 2, name='d1_2')
 pp.create_line_from_parameters(project_net, from_bus=2, to_bus=3, length_km=30, r_ohm_per_km=0.031, x_ohm_per_km=0.193358009, c_nf_per_km=18.69669739, max_i_ka=0.88898 * 2, name='d2_3')
@@ -117,6 +118,7 @@ pp.create_line_from_parameters(project_net, from_bus=4, to_bus=5, length_km=76.4
 
 ############ External grid
 pp.create_ext_grid(project_net,0)
+#project_net.line.loc[1,'in_service'] = False
 
 ############# Loads
 def get_reactive(P,PF): #everything the unit is in kX
